@@ -610,7 +610,8 @@ PRODUCTS.forEach(p => {
       <p class="desc">${p.desc}</p>
       ${swatches}
       <div class="price-row">
-        <span class="price">${p.price} dh</span>
+        ${p.oldPrice ? `<span style="text-decoration:line-through;color:#999;margin-right:8px">${p.oldPrice} dh</span>` : ""}
+<span class="price">${p.price} dh</span>
         <button class="add-btn" data-product="${p.id}">Ajouter au panier</button>
       </div>
     </div>
